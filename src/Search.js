@@ -25,7 +25,7 @@ const Search = ({ token }) => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/search?term=${searchTerm}`, {
+      const response = await axios.get(`http://20.106.171.147:3001/search?term=${searchTerm}`, {
         headers: {
           Authorization: token,
         },

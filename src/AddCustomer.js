@@ -11,7 +11,7 @@ const AddCustomer = () => {
 
   const handleAddCustomer = async () => {
     try {
-      await axios.post('http://localhost:3001/add-customer', {
+      await axios.post('http://20.106.171.147:3001/add-customer', {
         name,
         email,
         address,

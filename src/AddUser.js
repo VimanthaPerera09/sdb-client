@@ -8,7 +8,7 @@ const AddUser = () => {
 
   const handleAddUser = async () => {
     try {
-      await axios.post('http://localhost:3001/add-user', {
+      await axios.post('http://20.106.171.147:3001/add-user', {
         username,
         password,
         role,

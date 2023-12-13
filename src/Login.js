@@ -11,7 +11,7 @@ const Login = ({ setToken }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/login', {
+      const response = await axios.post('http://20.106.171.147:3001/login', {
         username,
         password,
       });
