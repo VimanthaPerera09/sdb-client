@@ -11,19 +11,27 @@ const Login = ({ setToken }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://20.106.171.147:3001/login', {
-        username,
-        password,
-      });
-
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+  
+      const response = await axios.post(
+        'http://20.106.171.147:3001/login',
+        {
+          username,
+          password,
+        },
+        { headers } // Include headers in the request
+      );
+  
       const { token } = response.data;
       setToken(token);
-
+  
       // Redirect to the search page upon successful login
       navigate('/search');
     } catch (error) {
       console.error('Login failed', error);
-
+  
       // Set the login error state to display the error message
       setLoginError('Invalid credentials');
     }
